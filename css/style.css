@@ -122,6 +122,7 @@ header {
     color: var(--secondary-color);
     height: 2rem;
     width: 2rem;
+    cursor: pointer;
 }
 
 .carousel-item {
@@ -150,8 +151,6 @@ header {
     background-color: var(--black-color);
 }
 
-
-
 .wordpress-slider {
     display: flex;
     padding: 0;
@@ -168,6 +167,7 @@ header {
 .image img {
     width: 100%;
     height: auto;
+    cursor: pointer;
 } 
 
 /*Hamburger*/
@@ -428,6 +428,24 @@ textarea {
     width: 100%;
     resize: none;
 }
+
+/*About me page*/
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 600px;
+    height: auto;
+}
+
+.about-container img {
+    width: 100%;
+}
+
+.about-me h2 {
+    color: var(--black-color);
+}
+
 /*Footer*/
 footer {
     background-color: var(--primary-color);

@@ -35,6 +35,10 @@ function createHtml(post, img) {
                                             <div class="image">
                                                 <img src="${img}" id="myImg" alt="${post[0].better_featured_image.alt_text}"/>
                                             </div>
+                                            <div class="btn-container">
+                                                <a href="/contact.html" class="contact-btn">Contact Me</a>
+                                                <a href="/about.html" class="about-btn">About Me</a>
+                                            </div>
                                             <p>${post[0].excerpt.rendered}</p>
                                         </div>
                                     </div>
