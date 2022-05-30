@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a travel blog about traveling in Japan. Contact form for anyone who might be interested to learn more.">
+    <meta name="keywords" content="japan, travel, blog, food">
+    <meta name="auther" content="John Willy Andersen">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Headless blog | Contact</title>
+</head>
+<body>
+    <header class="header-grid">
+        <div class="logo">
+            <a href="/index.html"><img src="./img/mizu.png" alt="Japanese sign for water"></a>
+        </div>
+        <nav>  
+            <ul class="nav-links">
+                <li><a href="/index.html" class="home-link">Home</a></li>
+                <li><a href="/posts.html" class="posts-link">Posts</a></li>
+                <li><a href="/about.html" class="about-link">About</a></li>
+                <li><a href="/contact.html" class="contact-link current-page">Contact</a></li>
+            </ul>
+            <label class="hamburger" for="hamburger-menu">           
+                <span></span>
+            </label>
+        </nav>
+    </header>
+
+    <main>
+        <section class="heading">
+            <h1>Contact Form</h1>
+        </section>
+        <section class="form-section">
+            <form id="create-account-form">
+                <div class="title">
+                    <h2>Create Account</h2>
+                </div>
+                <div class="input-group">
+                    <label for="fullname">Name</label>
+                    <input type="text" id="fullname" placeholder="Name" name="fullname">
+                    <p>Error message</p>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="email" name="email">
+                    <p>Error message</p>
+                </div>
+                <div class="input-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" placeholder="subject" name="subject">
+                    <p>Error message</p>
+                </div>
+                <div class="input-group">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Write message"></textarea>
+                    <p>Error message</p>
+                </div>
+
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="logo">
+            <a href="/index.html"><img src="./img/mizu.png" alt="Japanese sign for water"></a>
+        </div>
+        <div class="blog-name">
+            <p>Willy`s travel blog</p>
+        </div>
+    </footer>
+
+    <script src="js/contact.js"></script>
+</body>
+</html>

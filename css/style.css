@@ -1,0 +1,518 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Public+Sans:wght@100;300;400&display=swap");
+
+html {
+    height: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #ab1b27;
+    --secondary-color: #f8f8f8;
+    --black-color: #36454f;
+    --font: "Montserrat", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--secondary-color);
+    font-family: var(--font);
+    min-height: 100%;
+}
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+    margin: 1em auto;
+}
+
+h2 {
+    text-align: center;
+    margin: 1em;
+    color: var(--secondary-color);
+}
+
+a {
+    text-decoration: none;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+/*header*/
+.nav-links {
+    display: flex;
+    margin-top: 6em;
+    font-weight: bold;
+    text-transform: uppercase;
+    grid-area: header;
+    grid-column-start: 3 / span 2;
+}
+
+.nav-links a {
+    padding: 10px;
+    margin: 1em;
+    color: var(--secondary-color);
+}
+
+.current-page {
+    text-decoration: underline;
+    transition: 200ms;
+}
+
+.logo {
+    margin: 1em 2em;
+    grid-area: logo;
+    color: var(--secondary-color);
+}
+
+.header-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "logo logo logo header";
+}
+
+header {
+    background-color: var(--primary-color);
+    width: 100%;
+}
+
+/*Index page*/
+/*Carousel*/
+.carousel {
+    overflow: hidden;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.carousel .carousel-item,
+.carousel .carousel-item--hidden {
+    display: none;
+}
+
+.carousel .carousel-item {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+}
+
+.carousel .carousel-item--visible {
+    display: block;
+}
+
+.carousel-action {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.carousel-button {
+    border: 0;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    height: 2rem;
+    width: 2rem;
+}
+
+.carousel-item {
+    object-fit: cover;
+    text-align: center;
+}
+
+.carousel-item a {
+    color: var(--black-color);
+}
+
+.carousel-nav {
+    display: flex;
+}
+
+.carousel-dot {
+    border: 0;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background: var(--primary-color);
+    cursor: pointer;
+}
+
+.current-post {
+    background-color: var(--black-color);
+}
+
+
+
+.wordpress-slider {
+    display: flex;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.image {
+    max-height: 400px;
+    max-width: 400px;
+    margin: 1em auto;
+    padding: 3px;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+} 
+
+/*Hamburger*/
+.hamburger {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    width: 26px;
+    height: 26px;
+    top: 20px;
+    right: 20px;
+    z-index: 1;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.hamburger > span,
+.hamburger > span::before,
+.hamburger > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: var(--secondary-color);
+}
+
+.hamburger > span::before {
+    content: "";
+    top: -8px;
+}
+
+.hamburger > span::after {
+    content: "";
+    top: 8px;
+}
+
+.link {
+    transform: translateY(0);
+}
+
+/*Posts page*/
+.image-container img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.posts-heading a {
+    color: var(--secondary-color);
+}
+
+.posts-image {
+    max-width: 400px;
+    max-height: 400px;
+    margin: 2rem;
+}
+
+.posts-item p{   
+    text-align: center;
+    color: var(--secondary-color);
+    margin: 1rem auto;
+    font-size: 20px;
+}
+
+.posts-card {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: var(--primary-color);
+    border-radius: 20px;
+    max-width: 400px;
+    height: auto;
+    margin: 20px;
+}
+
+.wordpress-posts {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.btn-container {
+    display: flex;
+    text-align: center;
+}
+
+.contact-btn {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    width: 80%;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0 10px;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.about-btn {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    width: 80%;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0 10px;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.see-more {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    width: 200px;
+    padding: 10px;
+    font-size: 15px;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 50px;
+    text-align: center;
+    margin: 1rem auto;
+    cursor: pointer;
+}
+
+/*Specific-post page*/
+.modal {
+    position: fixed;
+    display: none;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: var(--black-color);
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+#modal-img {
+    position: absolute;
+    z-index: 1;
+    width: 50%;
+    height: auto;
+    top: 100px;
+    left: 25%;
+}
+
+.specific-card {
+    background-color: var(--primary-color);
+    max-width: 600px;
+    border-radius: 20px;
+    height: auto;
+    margin: 20px auto;
+}
+
+.specific-post-item {
+    margin: 1em;
+    justify-content: center;
+    border-radius: 50%;
+    object-fit: cover
+}
+
+.specific-post-item p {
+    color: var(--secondary-color);
+    text-align: center;
+    margin: 1rem 4rem;
+}
+
+.specific-post-header {
+    margin-top: 5rem;
+}
+
+.image {
+    max-width: 400px;
+}
+
+.image img {
+    width: 100%;
+}
+
+/*Contact page*/
+.form-section {
+    display: flex;
+    justify-content: center;
+}
+
+#header {
+    text-align: center;
+    color: aliceblue;
+}
+
+#create-account-form{
+    max-width: 400px;
+    padding: 20px;
+}
+
+.title {
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin: 20px 0;
+}
+
+.input-group label {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+}
+
+.input-group p {
+    font-size: 15px;
+    color: red;
+    visibility: hidden;
+}
+
+.error input {
+    border: 3px red solid;
+}
+
+.error p {
+    visibility: visible;
+}
+
+.error textarea {
+    border: 3px red solid;
+}
+
+.success input {
+    border: 3px green solid;
+}
+
+.success textarea {
+    border: 3px green solid;
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    border: none;
+    text-transform: uppercase;
+}
+
+textarea {
+    display: block;
+    width: 100%;
+    resize: none;
+}
+/*Footer*/
+footer {
+    background-color: var(--primary-color);
+    margin-top: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "logo logo logo blog-name";
+}
+
+.blog-name {
+    grid-area: blog-name;
+    color: var(--secondary-color);
+}
+
+@media only screen and (max-width: 768px) {
+    .hamburger {
+        visibility: visible;
+    }
+
+    .nav-links {
+        display: none;
+        position: fixed;
+        transform: translateY(22%);
+        transition: transform 0.2s;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--primary-color);
+        color: white;
+        list-style: none;
+        padding-top: 4rem;
+        z-index: 1;
+    }
+
+    /*Posts page*/
+    .posts-card {
+        margin: 1rem;
+    }
+
+    /*Specific post page*/
+
+    .specific-card {
+        margin: 1rem;
+    }
+
+    /*Footer*/
+    .blog-name {
+        text-align: center;
+    }
+
+    .logo img {
+        margin: 0 auto;
+    }
+
+    footer {
+        display: block;
+    }
+}
+
+/*Loader*/
+@keyframes loading {
+    0% {
+        transform: translate3d(-50%, -50%, 0) rotate(0deg);
+    }
+    100% {
+        transform: translate3d(-50%, -50%, 0) rotate(360deg);
+    }
+}
+
+.load {
+    animation: 1300ms linear infinite loading;
+    animation-play-state: inherit;
+    border: solid 10px var(--black-color);
+    border-bottom-color: var(--primary-color);
+    border-radius: 50%;
+    content: "";
+    margin: 100px auto;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    top: 10%;
+    left: 10%;
+    transform: translate3d(-50%, -50%, 0);
+    will-change: transform;
+}
+
